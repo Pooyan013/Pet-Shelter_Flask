@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style_signup.css') }}">
+</head>
+<body>
+
+<header>
+  <nav>
+    <ul>
+      <li><a href="/home">Home</a></li>
+      <li><a href="/pets">Pets</a></li>
+      <li><a href="/login">Login</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="background-container">
+  <img src="{{ url_for('static', filename='assets/img/cute-yet-bored-funny-cat-e2ftbgrfxrbazqsb.jpg') }}" alt="Background Image">
+</div>
+
+<div class="signup-container">
+  <form class="signup-form" method="POST" action="/signup">
+    <h2>Form</h2>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+    </div>
+    <div class="form-group">
+      <label for="last_name">Last Name</label>
+      <input type="text" id="last_name" name="last_name" placeholder="Enter your last name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required>
+    </div>
+    <div class="form-group">
+      <label for="confirm_password">Confirm Password</label>
+      <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your password" required>
+    </div>
+    <div class="form-group">
+      <label for="pets">Favorite Pet</label>
+      <input type="text" id="pets" name="pets" placeholder="Add your favorite pet's name">
+    </div>
+    <button type="submit" class="btn-signup">Sign Up</button>
+  </form>
+</div>
+
+</body>
+</html>
